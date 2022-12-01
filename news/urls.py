@@ -1,7 +1,9 @@
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from .views import home, sport_news
 
 urlpatterns = [
-    re_path(r"^home$", home, kwargs={"address": "Nazarbayeva 123"}),
-    re_path(r"^home/\w+/home|index/", sport_news, kwargs={"index": 123, "name": "SPORT NEWS"})
+    path("home/", home),  # 1 берет по умолчанию
+    path("home/<str:address>/", home),
+    path("home/<str:address>/<int:age>/", home),  # 2 возвращает адрес
+    path("sport/<str:index>/<name>/", sport_news),
 ]

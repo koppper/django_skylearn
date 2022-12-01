@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # наши приложений
     'hello',
     "news.apps.NewsConfig",
+    "animals",
 ]
 
 MIDDLEWARE = [
