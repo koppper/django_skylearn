@@ -9,7 +9,7 @@ def animals(request):
 
 
 def home(request):
-    return HttpResponseGone("410 ERROR")
+    return render(request, "animals.html")
 
 
 def index(request):

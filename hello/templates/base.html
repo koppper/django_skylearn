@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BASE HTML</title>
+    <link href="{% static 'css/style2.css' %}" rel="stylesheet">
+</head>
+<body>
+<h1> Hello World! </h1>
+HEADER
+CONTENT
+{% block header %} <h3> ГЛАВНАЯ \ ВХОД \ ВЫХОД \ </h3> {% endblock header %}
+{% block content %} <h3> CONTENT DEFAULT </h3> {% endblock content %}
+{% block test %}{% endblock test %}
+{{ auto }}
+{% autoescape off %} {{ auto }} {% endautoescape %}
+{% comment %} COMMENT MESSAGE {% endcomment %}
+<h1>{{ sum }}</h1>
+{% if sum > 100 %}
+СУМ БОЛЬШЕ ЧЕМ 100
+{% elif sum == 100 %}
+СУМ 100
+{% else %}
+МЕНЬШЕ ЧЕМ 100
+{% endif %}
+</body>
+</html>
