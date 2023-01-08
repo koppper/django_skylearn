@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'hello',
     "news.apps.NewsConfig",
     "animals",
+    'crud'
 ]
 
 MIDDLEWARE = [

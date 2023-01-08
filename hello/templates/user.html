@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .row{
+    width: 100%;
+    display: flex;
+    }
+
+</style>
+<body>
+<!--{{ user }}-->
+<br>
+<!--{% for i in user %}-->
+
+<!--    <h3> {{ i.first_name }} </h3>-->
+<!--<h3> {{ i.second_name }} </h3>-->
+<!--<h3> {{ i.email }} </h3> <br>-->
+
+<!--{% endfor %}-->
+
+
+<div class="row">
+    <div class="row2"></div>
+    {% for i in user %}
+        {{ i.first_name }}
+        {{ i.second_name }}<br>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
